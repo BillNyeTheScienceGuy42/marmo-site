@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Redirect</title>
+    <script>
+      const path = window.location.pathname;
+      // Remove the double slash that GitHub Pages creates
+      if (path !== '/' && !path.includes('.')) {
+        window.location.replace(path);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
