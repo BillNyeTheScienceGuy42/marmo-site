@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-copyright">
-        © 2025 Marmo VR | ScreenVR Studios Limited. All rights reserved.
+        © 2026 Marmo VR | ScreenVR Studios Limited. All rights reserved.
       </div>
     </footer>
   )
