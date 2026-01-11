@@ -1,4 +1,8 @@
 export default function About() {
+  const cardStyle = {
+    backgroundColor: '#232b45'
+  };
+
   return (
     <div id="about" className="about-container">
       <h1 className="about-title">About Marmo</h1>
@@ -12,19 +16,19 @@ export default function About() {
       <div className="about-features-section">
         <h2 className="features-title">Around the Game</h2>
         <div className="about-features">
-          <div className="feature-card forest-card">
+          <div className="feature-card" style={cardStyle}>
             <h3>Forest</h3>
             <p>Explore a forest filled with lots of fun features! Use a trampoline for bouncing around, a piano to play, and a clubhouse to hang out with friends.</p>
           </div>
-          <div className="feature-card shop-card">
+          <div className="feature-card" style={cardStyle}>
             <h3>Shop</h3>
             <p>The shop offers a rotating set of cosmetics, including featured items and seasonal options, giving you plenty of ways to customize your look.</p>
           </div>
-          <div className="feature-card pvp-card">
+          <div className="feature-card" style={cardStyle}>
             <h3>PvP</h3>
             <p>For competitive players, the PvP area delivers fast, moving combat with a selection of unlockable weapons. Each option introduces its own playstyle, encouraging skill, positioning, and quick decision making.</p>
           </div>
-          <div className="feature-card team-card">
+          <div className="feature-card" style={cardStyle}>
             <h3>Team</h3>
             <p>Marmo blends the nostalgic fan-game feel with a modern polish. Developed by ScreenVR and Lucid, we do our best to get what the community wants into the game, and collaborate with the community on ideas and features.</p>
           </div>

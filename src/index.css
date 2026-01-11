@@ -31,16 +31,16 @@
     padding: 28px 20px;
     width: 260px;
     text-align: left;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, transform 0.3s ease;
     border: none;
     outline: 1px solid rgba(255, 250, 210, 0.08);
     position: relative;
     overflow: hidden;
-        transition: 0.5s;
+    will-change: transform;
 }
 
 .feature-card.forest-card {
-    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55)), url(assets/Forest2.png);
+    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55));
     background-size: cover;
     background-position: center;
 }
@@ -51,7 +51,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 0;
 }
 .feature-card.forest-card > * {
@@ -60,7 +60,7 @@
 }
 
 .feature-card.shop-card {
-    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55)), url(assets/Shop.png);
+    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55));
     background-size: cover;
     background-position: center;
 }
@@ -71,7 +71,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 0;
 }
 .feature-card.shop-card > * {
@@ -80,7 +80,7 @@
 }
 
 .feature-card.pvp-card {
-    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55)), url(assets/PvP.png);
+    background: linear-gradient(135deg, rgba(30,39,61,0.55), rgba(0,0,0,0.55));
     background-size: cover;
     background-position: center;
 }
@@ -91,7 +91,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 0;
 }
 .feature-card.pvp-card > * {
@@ -163,7 +163,7 @@ a {
                     url(assets/Forest.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,7 @@ a {
     max-width: 700px;
     width: 60%;
     display: block;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     margin-top: 100px;
 }
 
@@ -210,8 +210,7 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(24, 34, 52, 0.9);
-    backdrop-filter: blur(10px);
+    background-color: rgba(24, 34, 52, 0.95);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -227,8 +226,7 @@ a {
 }
 
 .nav-logo:hover {
-    transform: scale(1.05);
-    transform: rotate(360deg);
+    transform: scale(1.05) rotate(360deg);
 }
 
 .nav-links {
@@ -295,14 +293,14 @@ a {
 .down-arrow {
     width: 28px;
     animation: oscillate 2.5s ease-in-out infinite;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .about-container {
     background-image: linear-gradient(135deg, rgba(30, 39, 61, 0.91), rgba(0, 0, 0, 0.55)), url(assets/Forest.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     padding: 120px 20px;
     text-align: center;
     position: relative;
@@ -315,7 +313,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(20px);
+    background-color: rgba(30, 39, 61, 0.4);
     z-index: 0;
 }
 
