@@ -5,7 +5,6 @@
     <title>Page Redirect</title>
     <script>
       const path = window.location.pathname;
-      // Remove the double slash that GitHub Pages creates
       if (path !== '/' && !path.includes('.')) {
         window.location.replace(path);
       }
