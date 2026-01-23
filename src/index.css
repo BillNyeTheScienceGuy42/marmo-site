@@ -612,21 +612,22 @@ body {
     color: rgba(255, 250, 210, 0.6);
 }
 
-/* diffeerent screens */
+/* TABLET (max-width: 768px) */
 @media (max-width: 768px) {
     .header-container {
         gap: 40px;
         height: auto;
         min-height: 100vh;
         padding: 80px 20px 40px;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
     .header-logo {
         width: 80%;
         min-width: 250px;
         max-width: 500px;
-        margin-top: 0px;
-
+        margin-top: 0;
     }
 
     .header-download {
@@ -655,6 +656,8 @@ body {
 
     .about-container {
         padding: 80px 20px;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
     .about-container h1 {
@@ -667,80 +670,54 @@ body {
         width: 90%;
     }
 
-    .privacy-container {
-        padding: 80px 30px 60px;
-    }
-
-    .privacy-header h1 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .privacy-accent {
-        width: 60px;
-        margin-bottom: 30px;
-    }
-
-    .privacy-container h2 {
-        font-size: 1.2rem;
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }
-
-    .privacy-container h3 {
-        font-size: 1rem;
-        margin-top: 20px;
-        margin-bottom: 12px;
-    }
-
-    .privacy-container p {
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-    }
-
-    .privacy-container ul {
-        margin: 15px 0;
-        padding-left: 25px;
-    }
-
-    .privacy-container li {
-        margin-bottom: 10px;
-        font-size: 0.95rem;
-    }
-
+    .privacy-container,
     .presskit-container {
         padding: 80px 30px 60px;
     }
 
+    .privacy-header h1,
     .presskit-header h1 {
         font-size: 1.8rem;
         margin-bottom: 15px;
     }
 
+    .privacy-accent,
     .presskit-accent {
         width: 60px;
         margin-bottom: 30px;
     }
 
-    .presskit-intro {
-        font-size: 1rem;
-        margin-bottom: 35px;
-    }
-
+    .privacy-container h2,
     .presskit-container h2 {
         font-size: 1.2rem;
         margin-top: 30px;
         margin-bottom: 15px;
     }
 
+    .privacy-container h3,
+    .presskit-container h3 {
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+
+    .privacy-container p,
+    .presskit-container p,
+    .privacy-container li,
+    .presskit-list li {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .privacy-container ul,
     .presskit-list {
         margin: 15px 0;
         padding-left: 25px;
     }
 
-    .presskit-list li {
-        margin-bottom: 10px;
-        font-size: 0.95rem;
+    .presskit-intro {
+        font-size: 1rem;
+        margin-bottom: 35px;
     }
 
     .presskit-restriction {
@@ -776,7 +753,7 @@ body {
     .footer-logo {
         padding-right: 0;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 250, 210, 0.2);
+        border-bottom: 1px solid var(--color-border);
         padding-bottom: 30px;
         margin-bottom: 10px;
         width: 100%;
@@ -790,7 +767,7 @@ body {
 
     .footer-column {
         flex: 1;
-        border-right: 1px solid rgba(255, 250, 210, 0.2);
+        border-right: 1px solid var(--color-border);
         padding-right: 20px;
         gap: 14px;
         text-align: right;
@@ -815,10 +792,13 @@ body {
     }
 }
 
+/* MOBILE (max-width: 480px) */
 @media (max-width: 480px) {
     .header-container {
         gap: 30px;
         padding: 70px 15px 30px;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
     .header-logo {
@@ -861,6 +841,8 @@ body {
 
     .about-container {
         padding: 60px 15px;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
     .about-container h1 {
@@ -870,6 +852,74 @@ body {
 
     .about-container p {
         font-size: 0.95rem;
+    }
+
+    .privacy-container,
+    .presskit-container {
+        padding: 60px 20px 50px;
+    }
+
+    .privacy-header h1,
+    .presskit-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .privacy-accent,
+    .presskit-accent {
+        width: 50px;
+        margin-bottom: 25px;
+    }
+
+    .privacy-container h2,
+    .presskit-container h2 {
+        font-size: 1rem;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+
+    .privacy-container h3,
+    .presskit-container h3 {
+        font-size: 0.95rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .privacy-container p,
+    .presskit-container p,
+    .privacy-container li,
+    .presskit-list li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .privacy-container ul,
+    .presskit-list {
+        margin: 12px 0;
+        padding-left: 20px;
+    }
+
+    .presskit-intro {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .presskit-restriction {
+        font-size: 0.9rem;
+        margin: 25px 0;
+        padding: 12px;
+    }
+
+    .presskit-download {
+        padding: 12px 32px;
+        font-size: 0.85rem;
+        margin: 20px 0;
+    }
+
+    .presskit-footer {
+        font-size: 0.85rem;
+        margin-top: 30px;
+        padding-top: 20px;
     }
 
     .footer-container {
@@ -900,85 +950,5 @@ body {
 
     .footer-column a {
         font-size: 0.85rem;
-    }
-
-    .privacy-container {
-        padding: 60px 20px 50px;
-    }
-
-    .privacy-header h1 {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-    }
-
-    .privacy-accent {
-        width: 50px;
-        margin-bottom: 25px;
-    }
-
-    .privacy-container h2 {
-        font-size: 1rem;
-        margin-top: 25px;
-        margin-bottom: 12px;
-    }
-
-    .privacy-container h3 {
-        font-size: 0.95rem;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-
-    .privacy-container p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-    }
-
-    .privacy-container ul {
-        margin: 12px 0;
-        padding-left: 20px;
-    }
-
-    .privacy-container li {
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-    }
-
-    .presskit-intro {
-        font-size: 0.95rem;
-        margin-bottom: 30px;
-    }
-
-    .presskit-container h2 {
-        font-size: 1rem;
-        margin-top: 25px;
-        margin-bottom: 12px;
-    }
-
-    .presskit-list {
-        margin: 12px 0;
-        padding-left: 20px;
-    }
-
-    .presskit-list li {
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-    }
-
-    .presskit-restriction {
-        font-size: 0.9rem;
-        margin: 25px 0;
-        padding: 12px;
-    }
-
-    .presskit-download {
-        padding: 12px 32px;
-        font-size: 0.85rem;
-        margin: 20px 0;
-    }
-
-    .presskit-footer {
-        font-size: 0.85rem;
-        margin-top: 30px;
-        padding-top: 20px;
     }
 }
